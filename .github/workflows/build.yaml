@@ -46,7 +46,10 @@ jobs:
         with:
           node-version: '18'
           working-directory: source/angular-app
-
+      
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+        
       - name: Install Dependencies (Angular)
         run: npm install
         working-directory: source/angular-app
