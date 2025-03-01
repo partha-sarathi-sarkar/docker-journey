@@ -15,7 +15,6 @@ jobs:
       angularIMAGENAME: "${{ secrets.DOCKER_USERNAME }}/angular-app"
       nodeImageName: "${{ secrets.DOCKER_USERNAME }}/node-app"
 
-
     steps:
       # Set build ID
       - name: Set BUILD_ID
