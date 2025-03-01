@@ -4,7 +4,7 @@ FROM node:18 AS builder
 WORKDIR /app
 
 # Install Angular CLI globally (optional if you want to build locally first)
-RUN npm i @angular/cli@17.3.0
+RUN npm install -g @angular/cli
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
