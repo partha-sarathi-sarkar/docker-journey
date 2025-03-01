@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # Angular (npm dependencies)
+  - package-ecosystem: "npm"
+    directory: "source/angular-app"  # Adjust to the actual path where Angular package.json is
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "angular"
+    # reviewers:
+    #   - "your-frontend-team"  # Optional - if you have a team assigned for review
+    ignore:
+      - dependency-name: "@angular/*"
+        versions: ["<17.0.0"]  # Example - only target Angular 17+
+
+  # Backend - Node.js (npm dependencies)
+  - package-ecosystem: "npm"
+    directory: "source/node-app"  # Adjust to your actual backend folder
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "nodejs"
+    # reviewers:
+    #   - "your-backend-team"  # Optional - if you have a team assigned for review
+
+  # # Global tools in root (like eslint config, commitlint, etc.)
+  #  - package-ecosystem: "npm"
+  #    directory: "/"  # If you have a root-level package.json (optional)
+  #   schedule:
+  #     interval: "weekly"
+  #   open-pull-requests-limit: 10
+  #   labels:
+  #     - "dependencies"
+  #     - "root"
+  #   reviewers:
+  #     - "devops-team"  # Optional - assign to whoever manages tools
