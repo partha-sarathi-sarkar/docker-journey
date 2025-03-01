@@ -1,4 +1,4 @@
-name: Dockerized applications
+name: PR Check
 
 on:
   pull_request
