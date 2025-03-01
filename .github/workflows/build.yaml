@@ -56,7 +56,7 @@ jobs:
       #   working-directory: source/angular-app
 
       - name: Build Frontend
-        run: npm run build -- --configuration=production
+        run: npm run build
         working-directory: source/angular-app
 
       # ------------------
