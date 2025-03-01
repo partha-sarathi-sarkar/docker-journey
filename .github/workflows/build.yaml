@@ -17,6 +17,9 @@ jobs:
 
 
     steps:
+      # Set build ID
+      - name: Set BUILD_ID
+        run: echo "BUILD_ID=${{ github.run_id }}" >> $GITHUB_ENV
       # Checkout Code
       - name: Checkout Code
         uses: actions/checkout@v4
